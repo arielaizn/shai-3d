@@ -1,0 +1,23 @@
+PREAMBLE v1.0
+Bright toy-store product photography for a children's 3D-printing brand. Shoot every frame on one
+seamless flat cream background, hex #FFF7EC, filling the frame corner to corner, with no horizon line,
+no table edge, no wall, no floor, no room, no window, and no props beyond what this brief names.
+Colour weights across the whole frame, obey them exactly: cream #FFF7EC 62 percent, pure white #FFFFFF
+14 percent, near-black violet ink #1A1420 8 percent, turquoise #12BFB8 8 percent, sunshine yellow
+#FFC531 5 percent, candy red #F5333F 3 percent. If a line beginning COLOUR WEIGHTS appears after this
+paragraph, that line replaces these six percentages and you obey it instead. Lighting: one large soft
+key light from the upper left, about 35 degrees above the object, with the quality of a two-metre
+softbox; a white bounce card on the lower right holding the shadows open at about a three-to-one ratio;
+one short soft contact shadow directly beneath the object and nothing else; neutral daylight white
+balance at 5600 Kelvin. Camera: 50mm-equivalent lens on a full-frame body at f/5.6, three-quarter view
+from 25 degrees above the object, subject centred, sharp corner to corner, no shallow depth of field,
+no background blur, no bokeh, no vignette, no lens flare. Rendering: clean modern commercial e-commerce
+photography, crisp edges, honest matte plastic surfaces with fine visible horizontal 3D-printing layer
+lines, colour saturated but never neon, no reflections of a studio or a photographer. Absolutely
+forbidden: any text, letters, numbers, words, captions, labels, watermarks, signatures, packaging copy,
+screen text or interface text, in any language including Hebrew and English; any brand name, logo,
+trademark, machine branding or product badge; any human being, face, figure, hand or body part; golden
+hour light, orange wash, amber glow, warm tungsten light, sunset colour; industrial workshop mood,
+garage, workbench, hand tools, sawdust, metal shelving, dark or moody background; artisan, handcrafted
+or boutique mood, kraft paper, burlap, linen, raw wood grain, ceramic, macrame, dried flowers, twine;
+grunge, dust, scratches, film grain, retro filter, HDR look.

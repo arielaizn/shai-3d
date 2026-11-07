@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" role="img" aria-label="שי 3D">
+<title>שי 3D</title>
+<circle cx="500" cy="500" r="500" fill="#F5333F"/>
+<g transform="translate(190.00 190.00) scale(9.6875)"><title>שי 3D</title><g><g transform="translate(4 1) scale(.875)"><path fill="#FFF7EC" d="M6 19Q3 17 6 15L29 4Q32 2.5 35 4L58 15Q61 17 58 19L35 30Q32 31.5 29 30Z"/><path fill="#FFF7EC" d="M4 27L29 39Q32 40.5 35 39L60 27V34Q60 36 58 37L35 48Q32 49.5 29 48L6 37Q4 36 4 34Z"/><path fill="#FFF7EC" d="M4 45L29 57Q32 58.5 35 57L60 45V52Q60 54 58 55L35 66Q32 67.5 29 66L6 55Q4 54 4 52Z"/></g></g></g>
+</svg>

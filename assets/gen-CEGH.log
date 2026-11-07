@@ -1,0 +1,21 @@
+14 assets, 17 renders, 4 workers
+  [ok  ] C01-v1  
+  [ok  ] C02-v1  
+  [ok  ] C03-v1  
+  [ok  ] C04-v1  
+  [ok  ] C05-v1  
+  [ok  ] C06-v1  
+  [ok  ] E01-v1  
+  [FAIL] E02-v1  RuntimeError: Error 500: aspect_ratio is not within the range of allowed options
+   kie.ai server error. Will retry with backoff.
+  [ok  ] E03-v1  
+  [ok  ] E04-v1  
+  [ok  ] G01-v1  
+  [ok  ] G01-v2  
+  [ok  ] G02-v1  
+  [ok  ] G02-v2  
+  [ok  ] H01-v1  
+  [ok  ] H01-v2  
+  [ok  ] H02-v1  
+
+ok=16 skip=0 fail=1

@@ -1,0 +1,249 @@
+@import "tailwindcss";
+
+@theme {
+  /* ---------- kill the stock palette ---------- */
+  --color-*: initial;
+
+  --color-transparent: transparent;
+  --color-current: currentColor;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+
+  /* ---------- cream ---------- */
+  --color-cream-50:  #FFFCF7;
+  --color-cream-100: #FFF7EC;
+  --color-cream-200: #FBEFDE;
+  --color-cream-300: #F4E3CB;
+  --color-cream-400: #E8D2B3;
+  --color-cream-500: #D6BC96;
+  --color-cream-600: #B99C74;
+  --color-cream-700: #927858;
+  --color-cream-800: #6A563E;
+  --color-cream-900: #453728;
+
+  /* ---------- red ---------- */
+  --color-red-50:  #FFF1F1;
+  --color-red-100: #FFDDDE;
+  --color-red-200: #FFB9BC;
+  --color-red-300: #FF8A90;
+  --color-red-400: #FB5C65;
+  --color-red-500: #F5333F;
+  --color-red-600: #DB1F2B;
+  --color-red-700: #B2151F;
+  --color-red-800: #8A1018;
+  --color-red-900: #5E0B10;
+
+  /* ---------- turquoise ---------- */
+  --color-turq-50:  #EDFCFB;
+  --color-turq-100: #D0F7F4;
+  --color-turq-200: #9DEDE8;
+  --color-turq-300: #63DED7;
+  --color-turq-400: #2ECCC4;
+  --color-turq-500: #12BFB8;
+  --color-turq-600: #0E9C96;
+  --color-turq-700: #0B7A75;
+  --color-turq-800: #085B57;
+  --color-turq-900: #063E3B;
+
+  /* ---------- yellow ---------- */
+  --color-yellow-50:  #FFFAEB;
+  --color-yellow-100: #FFF2CC;
+  --color-yellow-200: #FFE49B;
+  --color-yellow-300: #FFD463;
+  --color-yellow-400: #FFC531;
+  --color-yellow-500: #F0AE0C;
+  --color-yellow-600: #C98C06;
+  --color-yellow-700: #9C6A06;
+  --color-yellow-800: #6F4B06;
+  --color-yellow-900: #4A3205;
+
+  /* ---------- ink ---------- */
+  --color-ink-50:  #F5F3F6;
+  --color-ink-100: #E6E2EA;
+  --color-ink-200: #CFC9D5;
+  --color-ink-300: #ADA3B6;
+  --color-ink-400: #8B8095;
+  --color-ink-500: #665C70;
+  --color-ink-600: #4E4557;
+  --color-ink-700: #372F3F;
+  --color-ink-800: #26202C;
+  --color-ink-900: #1A1420;
+
+  /* ---------- stage (3D only) ---------- */
+  --color-stage-950: #0C0812;
+  --color-stage-900: #120E18;
+  --color-stage-800: #191320;
+  --color-stage-700: #221B2C;
+  --color-stage-600: #2E2639;
+
+  /* ---------- semantic: surfaces ---------- */
+  --color-surface:          #FFF7EC;
+  --color-surface-raised:   #FFFFFF;
+  --color-surface-sunken:   #FBEFDE;
+  --color-surface-inverse:  #1A1420;
+  --color-surface-stage:    #191320;
+
+  /* ---------- semantic: borders ---------- */
+  --color-border-subtle: #E8D2B3;
+  --color-border-strong: #8B8095;
+  --color-border-toy:    #1A1420;
+  --color-border-stage:  #2E2639;
+
+  /* ---------- semantic: text ---------- */
+  --color-text-primary:       #1A1420;
+  --color-text-secondary:     #4E4557;
+  --color-text-muted:         #665C70;
+  --color-text-on-red:        #1A1420;
+  --color-text-on-accent:     #FFFCF7;
+  --color-text-on-turquoise:  #1A1420;
+  --color-text-on-yellow:     #1A1420;
+  --color-text-on-inverse:    #FFFCF7;
+  --color-text-on-stage:      #FFFCF7;
+  --color-text-stage-muted:   #ADA3B6;
+  --color-text-link:          #085B57;
+  --color-text-disabled:      #8B8095;
+
+  /* ---------- semantic: accent (the CTA) ---------- */
+  --color-accent:         #DB1F2B;
+  --color-accent-hover:   #B2151F;
+  --color-accent-pressed: #8A1018;
+  --color-accent-soft:    #FFF1F1;
+
+  /* ---------- semantic: play (turquoise actions) ---------- */
+  --color-play:         #12BFB8;
+  --color-play-hover:   #0E9C96;
+  --color-play-pressed: #0B7A75;
+  --color-play-soft:    #EDFCFB;
+  --color-play-border:  #0B7A75;
+
+  /* ---------- semantic: focus ---------- */
+  --color-focus-ring: #1A1420;
+  --color-focus-gap:  #FFFCF7;
+  --color-focus-halo: #9DEDE8;
+
+  /* ---------- semantic: the price tag ---------- */
+  --color-price-tag-bg:      #F5333F;
+  --color-price-tag-text:    #1A1420;
+  --color-price-tag-sub:     #5E0B10;
+  --color-price-tag-string:  #1A1420;
+  --color-price-burst:       #FFE49B;
+
+  /* ---------- semantic: status ---------- */
+  --color-success:        #0E7A43;
+  --color-success-soft:   #E4F5EA;
+  --color-success-strong: #0A5B32;
+  --color-warning:        #FFC531;
+  --color-warning-soft:   #FFF2CC;
+  --color-warning-text:   #6F4B06;
+  --color-danger:         #B2151F;
+  --color-danger-soft:    #FFF1F1;
+  --color-danger-strong:  #8A1018;
+
+  /* ---------- radius ---------- */
+  --radius-xs:   0.375rem;  /*  6px */
+  --radius-sm:   0.625rem;  /* 10px */
+  --radius-md:   0.875rem;  /* 14px */
+  --radius-lg:   1.25rem;   /* 20px */
+  --radius-xl:   1.75rem;   /* 28px */
+  --radius-2xl:  2.25rem;   /* 36px */
+  --radius-3xl:  3rem;      /* 48px */
+  --radius-full: 9999px;
+
+  /* ---------- spacing ---------- */
+  --spacing: 0.25rem;
+
+  --spacing-tap:        2.75rem;  /* 44px minimum touch target */
+  --spacing-tap-lg:     3.5rem;   /* 56px primary CTA height */
+  --spacing-gutter:     1.25rem;  /* 20px page gutter, mobile */
+  --spacing-gutter-lg:  2.5rem;   /* 40px page gutter, >=1024px */
+  --spacing-section:    4.5rem;   /* 72px vertical section rhythm, mobile */
+  --spacing-section-lg: 7.5rem;   /* 120px, >=1024px */
+  --spacing-swatch:     3rem;     /* 48px filament chip */
+  --spacing-content:    68rem;    /* 1088px max content width */
+
+  /* ---------- shadow (warm-tinted, never neutral grey) ---------- */
+  --shadow-xs:    0 1px 2px  rgba(61,39,22,0.08);
+  --shadow-sm:    0 2px 4px  rgba(61,39,22,0.10), 0 1px 1px rgba(61,39,22,0.06);
+  --shadow-md:    0 6px 14px -2px rgba(61,39,22,0.14), 0 2px 4px rgba(61,39,22,0.08);
+  --shadow-lg:    0 14px 30px -6px rgba(61,39,22,0.18), 0 4px 8px rgba(61,39,22,0.10);
+  --shadow-xl:    0 28px 56px -12px rgba(61,39,22,0.22), 0 8px 16px rgba(61,39,22,0.10);
+  --shadow-photo: 0 18px 40px -10px rgba(61,39,22,0.24), 0 3px 8px rgba(61,39,22,0.10);
+  --shadow-pop:     0 4px 0 0 #1A1420;
+  --shadow-pop-lg:  0 6px 0 0 #1A1420;
+  --shadow-pop-red: 0 4px 0 0 #8A1018;
+  --shadow-glow-red:  0 12px 40px -8px rgba(245,51,63,0.45);
+  --shadow-glow-play: 0 12px 40px -8px rgba(18,191,184,0.42);
+  --shadow-glow-gitd: 0 0 64px 0 rgba(166,255,126,0.42);
+  --shadow-stage:  0 32px 70px -16px rgba(12,8,18,0.45), 0 6px 14px rgba(12,8,18,0.22);
+  --inset-shadow-well: inset 0 2px 4px rgba(61,39,22,0.10);
+  --inset-shadow-stage: inset 0 1px 0 rgba(255,252,247,0.10), inset 0 -40px 80px -40px #0C0812;
+
+  /* ---------- motion ---------- */
+  --ease-toy:      cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-quick: cubic-bezier(0.5, 0, 0.75, 0);
+
+  --animate-pop:        pop 260ms var(--ease-toy) both;
+  --animate-price-slam: price-slam 420ms var(--ease-toy) both;
+  --animate-gitd-pulse: gitd-pulse 2.8s ease-in-out infinite;
+
+  /* ---------- flat brand aliases ----------
+     02/03/04/05/07 all reference --color-red / --color-turquoise / --color-cream /
+     --color-yellow / --color-ink. `--color-*: initial` wiped them, so without these
+     every `bg-cream`, `text-ink`, `text-red` in those specs is a silent no-op. */
+  --color-cream: var(--color-cream-100);
+  --color-red: var(--color-red-500);
+  --color-turquoise: var(--color-turq-500);
+  --color-yellow: var(--color-yellow-400);
+  --color-ink: var(--color-ink-900);
+}
+
+@keyframes pop {
+  0%   { transform: scale(0.88); opacity: 0; }
+  100% { transform: scale(1);    opacity: 1; }
+}
+@keyframes price-slam {
+  0%   { transform: scale(1.65) rotate(-7deg); opacity: 0; }
+  55%  { transform: scale(0.94) rotate(2deg);  opacity: 1; }
+  100% { transform: scale(1)    rotate(-3deg); opacity: 1; }
+}
+@keyframes gitd-pulse {
+  0%, 100% { opacity: 0.55; }
+  50%      { opacity: 1; }
+}
+
+/* ---------- border widths (v4 has no --border-width-* namespace) ---------- */
+@utility border-hair  { border-width: 1px; }
+@utility border-toy   { border-width: 3px; }
+@utility border-frame { border-width: 6px; }
+@utility border-photo { border-width: 12px; }
+
+@layer base {
+  :root { color-scheme: only light; }
+  html  { -webkit-text-size-adjust: 100%; }
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-text-primary);
+  }
+  ::selection {
+    background-color: var(--color-yellow-200);
+    color: var(--color-ink-900);
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-focus-ring);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px var(--color-focus-gap), 0 0 0 9px color-mix(in oklab, var(--color-focus-halo) 55%, transparent);
+    border-radius: var(--radius-sm);
+  }
+  .on-stage :focus-visible {
+    outline-color: var(--color-cream-50);
+    box-shadow: 0 0 0 2px var(--color-stage-900), 0 0 0 9px color-mix(in oklab, var(--color-turq-400) 45%, transparent);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}

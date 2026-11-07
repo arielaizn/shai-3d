@@ -1,0 +1,29 @@
+13 assets, 26 renders, 4 workers
+  [skip] A01-v1  
+  [skip] A01-v2  
+  [skip] A01-v3  
+  [ok  ] A01-v4  
+  [ok  ] A02-v1  
+  [ok  ] A02-v2  
+  [ok  ] A03-v1  
+  [ok  ] A03-v2  
+  [ok  ] A04-v1  
+  [ok  ] A05-v1  
+  [ok  ] A05-v2  
+  [ok  ] A06-v1  
+  [ok  ] B01-v1  
+  [ok  ] B01-v2  
+  [ok  ] B02-v1  
+  [ok  ] B02-v2  
+  [ok  ] B03-v1  
+  [ok  ] B03-v2  
+  [ok  ] B04-v1  
+  [ok  ] B04-v2  
+  [ok  ] B05-v1  
+  [ok  ] B05-v2  
+  [ok  ] B06-v1  
+  [ok  ] B06-v2  
+  [ok  ] B07-v1  
+  [ok  ] B07-v2  
+
+ok=23 skip=3 fail=0

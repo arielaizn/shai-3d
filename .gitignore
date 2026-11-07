@@ -1,0 +1,9 @@
+.vercel
+.env*
+
+.env*.local
+.env
+.vercel
+.playwright-mcp
+node_modules
+.next

@@ -1,0 +1,333 @@
+/* =====================================================================
+ * Layout classes the SCREENS need, on top of admin-theme.css.
+ *
+ * admin-theme.css owns the panel's visual language and is not touched here.
+ * This file adds only what a screen needs and a component cannot express in an
+ * inline style: media queries, sticky columns, and the two scroll surfaces.
+ *
+ * Two rules from RESOLUTIONS §12 apply to every rule in this file:
+ *   every `1fr` track is `minmax(0, 1fr)`
+ *   every flex child that can hold text carries `min-inline-size: 0`
+ * Without them the panel scrolls sideways on a phone in RTL, which is the one
+ * failure that makes a screen unusable rather than ugly.
+ * ===================================================================== */
+
+/* ------------------------------------------------------------ two columns */
+
+/* The story column comes first in the source, which in RTL puts it on the
+   right, and it is the one a phone reads first. */
+.a-two {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+  min-inline-size: 0;
+}
+
+@media (min-width: 1024px) {
+  .a-two {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .a-two[data-weight="wide-start"] {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  }
+}
+
+.a-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-inline-size: 0;
+}
+
+@media (min-width: 1024px) {
+  .a-stick {
+    position: sticky;
+    inset-block-start: 1rem;
+  }
+}
+
+/* ------------------------------------------------------------ form blocks */
+
+.a-fields {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.875rem;
+  min-inline-size: 0;
+}
+
+@media (min-width: 640px) {
+  .a-fields[data-cols="2"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .a-fields[data-cols="3"] {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* ------------------------------------------------------------ chip strip */
+
+/* Filters on a phone: one line that scrolls sideways INSIDE itself, so the
+   page behind it never does. */
+.a-chips {
+  display: flex;
+  gap: 0.375rem;
+  overflow-x: auto;
+  padding-block-end: 0.25rem;
+  margin-inline: -0.25rem;
+  padding-inline: 0.25rem;
+  min-inline-size: 0;
+  scrollbar-width: thin;
+}
+
+.a-chips > * {
+  flex: none;
+}
+
+.a-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  min-block-size: var(--admin-tap);
+  padding-inline: 0.875rem;
+  border-radius: var(--admin-r-pill);
+  border: 1px solid var(--admin-line-strong);
+  background-color: var(--admin-surface);
+  color: var(--admin-ink);
+  font: inherit;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.a-chip[aria-pressed="true"],
+.a-chip[aria-current="true"] {
+  background-color: var(--admin-ink);
+  border-color: var(--admin-ink);
+  color: #fffcf7;
+  font-weight: 700;
+}
+
+.a-chip-count {
+  font-variant-numeric: tabular-nums;
+  opacity: 0.75;
+}
+
+/* ------------------------------------------------------------ tiles */
+
+.a-numgrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.625rem;
+  min-inline-size: 0;
+}
+
+@media (min-width: 900px) {
+  .a-numgrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.a-numtile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  min-block-size: 5.5rem;
+  padding: 0.875rem;
+  border-radius: var(--admin-r-card);
+  border: 1px solid var(--admin-line);
+  background-color: var(--admin-surface);
+  box-shadow: var(--admin-shadow);
+  color: var(--admin-ink);
+  text-decoration: none;
+  min-inline-size: 0;
+}
+
+.a-numtile b {
+  font-family: var(--font-rubik), system-ui, sans-serif;
+  font-size: 2rem;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.a-numtile[data-zero="true"] b {
+  color: var(--admin-muted);
+}
+
+/* ------------------------------------------------------------ card grid */
+
+.a-cards {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.75rem;
+  min-inline-size: 0;
+}
+
+@media (min-width: 700px) {
+  .a-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  .a-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* ------------------------------------------------------------ charts */
+
+.a-barrow {
+  display: grid;
+  grid-template-columns: minmax(5.5rem, auto) minmax(0, 1fr) minmax(2.5rem, auto);
+  align-items: center;
+  gap: 0.5rem;
+  min-inline-size: 0;
+}
+
+.a-week {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  block-size: 6rem;
+  min-inline-size: 0;
+}
+
+.a-week > div {
+  flex: 1 1 0;
+  min-inline-size: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.125rem;
+  block-size: 100%;
+}
+
+.a-week span {
+  display: block;
+  border-radius: 4px 4px 0 0;
+  min-block-size: 2px;
+}
+
+/* ------------------------------------------------------------ the lab */
+
+/* On a phone the price lab is a bar pinned above the tab bar that opens into a
+   sheet. On a desktop it is a normal sticky card and none of this applies. */
+.a-labbar {
+  position: fixed;
+  inset-inline: 0;
+  inset-block-end: calc(4.25rem + env(safe-area-inset-bottom));
+  z-index: 35;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-block-size: var(--admin-tap);
+  padding: 0.5rem 1rem;
+  border-block-start: 2px solid var(--admin-turquoise);
+  background-color: var(--admin-surface);
+  font: inherit;
+  color: var(--admin-ink);
+  text-align: start;
+  cursor: pointer;
+  min-inline-size: 0;
+}
+
+@media (min-width: 1024px) {
+  .a-labbar {
+    display: none;
+  }
+}
+
+.a-sheet {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: rgba(26, 20, 32, 0.55);
+}
+
+.a-sheet-panel {
+  max-block-size: 85dvh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background-color: var(--admin-bg);
+  border-start-start-radius: var(--admin-r-card);
+  border-start-end-radius: var(--admin-r-card);
+  padding: 1rem 1rem calc(1.5rem + env(safe-area-inset-bottom));
+}
+
+@media (min-width: 1024px) {
+  .a-desktop-only-lab {
+    display: block;
+  }
+}
+
+.a-desktop-only-lab {
+  display: none;
+}
+
+/* ------------------------------------------------------------ misc */
+
+.a-kv {
+  display: grid;
+  grid-template-columns: minmax(6rem, auto) minmax(0, 1fr);
+  gap: 0.25rem 0.75rem;
+  margin: 0;
+  min-inline-size: 0;
+}
+
+.a-kv dt {
+  color: var(--admin-muted);
+  font-size: 0.875rem;
+}
+
+.a-kv dd {
+  margin: 0;
+  min-inline-size: 0;
+  overflow-wrap: anywhere;
+}
+
+.a-quote {
+  margin: 0;
+  padding: 0.75rem 0.875rem;
+  border-inline-start: 3px solid var(--admin-turquoise);
+  background-color: var(--admin-sunken);
+  border-radius: var(--admin-r-input);
+  overflow-wrap: anywhere;
+}
+
+.a-photo {
+  inline-size: 100%;
+  block-size: auto;
+  border-radius: var(--admin-r-input);
+  background-color: var(--admin-sunken);
+}
+
+.a-delta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.125rem 0.5rem;
+  border-radius: var(--admin-r-pill);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  background-color: var(--admin-sunken);
+  color: var(--admin-muted);
+}
+
+.a-delta[data-dir="up"] {
+  background-color: #fff1f1;
+  color: var(--admin-red-ink);
+}
+
+.a-delta[data-dir="down"] {
+  background-color: #edfcfb;
+  color: var(--admin-turquoise-ink);
+}

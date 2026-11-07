@@ -1,0 +1,14 @@
+11 assets, 11 renders, 4 workers
+  [ok  ] D01-v1  
+  [ok  ] D02-v1  
+  [ok  ] D03-v1  
+  [ok  ] D04-v1  
+  [ok  ] D05-v1  
+  [ok  ] D06-v1  
+  [ok  ] D07-v1  
+  [ok  ] D08-v1  
+  [ok  ] F01-v1  
+  [ok  ] F02-v1  
+  [ok  ] F03-v1  
+
+ok=11 skip=0 fail=0
